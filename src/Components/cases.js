@@ -19,7 +19,7 @@ class Cases extends React.Component {
         <section className="wrapper">
           {console.log(this.state.cases)}
 
-          <table class="table is-bordered">
+          <table class="wrapper">
             <thead>
               <tr className="table-data">
                 <th>Country</th>
@@ -30,8 +30,6 @@ class Cases extends React.Component {
                 <th>Recovered</th>
                 <th>Active</th>
                 <th>Critical</th>
-                <th>CasePerOneMillion</th>
-                <th>DeathPerOneMillion</th>
               </tr>
             </thead>
             {this.state.cases.map(country => (
