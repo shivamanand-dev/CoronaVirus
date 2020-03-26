@@ -1,10 +1,20 @@
 import React from "react";
-import CanvasJSReact from "../canvasjs-2.3.2/canvasjs.react";
-var CanvasJS = CanvasJSReact.CanvasJS;
-var CanvasJSChart = CanvasJSReact.CanvasJSChart;
+import { Bar, Line, Pie } from "react-chartjs-2";
 
 class Graph extends React.Component {
-    constructor(props)
+  constructor(props) {
+    super(props);
+    this.state = {
+      cases: []
+    };
+  }
+  componentDidMount() {
+    fetch;
+    "https://corona.lmao.ninja/countries"
+      .then(res => res.json())
+      .then(res => this.setState({ cases: res }));
+  }
+  render() {}
 }
 
-export default Graph
+export default Graph;
