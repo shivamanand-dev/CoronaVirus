@@ -71,10 +71,11 @@ tr:nth-child(even) {
   }
   .nav {
     width: 100%;
-    padding: 1rem 0;
+    padding: 1rem 0 1rem 1rem;
   }
   .world {
     width: 100%;
+    padding: 1rem;
   }
   .caption {
     width: 100%;
