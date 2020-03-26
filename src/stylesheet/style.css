@@ -1,6 +1,6 @@
 body {
   background-color: rgb(36, 30, 30);
-  color: #dddddd;
+  color: rgb(184, 184, 184);
 }
 .wrapper {
   max-width: 1100px;
@@ -29,6 +29,17 @@ body {
   font-size: 18px;
   padding: 1px 1rem 2rem 1rem;
 }
+.title {
+  color: rgb(184, 184, 184);
+}
+.title h4 {
+  padding: 10px;
+  font-size: 1.2rem;
+}
+.numbers h4 {
+  padding: 10px;
+  font-size: 1.2rem;
+}
 .covid {
   font-weight: bold;
 }
@@ -38,6 +49,7 @@ body {
 }
 .grid-col-2 {
   display: grid;
+  text-align: center;
   grid-template-columns: repeat(2, 1fr);
 }
 
