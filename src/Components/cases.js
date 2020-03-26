@@ -24,9 +24,9 @@ class Cases extends React.Component {
               <tr className="table-data">
                 <th>Country</th>
                 <th>Total Case</th>
-                <th>TodayCase</th>
+                <th>Today Case</th>
                 <th>Total Deaths</th>
-                <th>TodayDeaths</th>
+                <th>Today Deaths</th>
                 <th>Recovered</th>
                 <th>Active</th>
                 <th>Critical</th>

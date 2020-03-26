@@ -64,6 +64,7 @@ tr:nth-child(even) {
 
 @media all and (max-width: 768px) {
   body {
+    width: 100%;
     font-size: 13px;
   }
   .wrapper {
@@ -79,9 +80,6 @@ tr:nth-child(even) {
   }
   .caption {
     width: 100%;
-  }
-  .table-data {
-    display: none;
   }
 
   .nametag {
