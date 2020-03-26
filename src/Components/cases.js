@@ -19,7 +19,7 @@ class Cases extends React.Component {
         <section className="wrapper">
           {console.log(this.state.cases)}
 
-          <table class="wrapper">
+          <table class="wrapper vitamins">
             <thead>
               <tr className="table-data">
                 <th>Country</th>
