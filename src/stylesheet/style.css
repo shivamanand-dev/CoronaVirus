@@ -11,12 +11,12 @@ body {
 .nav {
   width: 100%;
   padding: 20px 100px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   background-color: rgba(44, 0, 0, 0.651);
 }
 .logo {
   font-size: 2rem;
-  width: 10rem;
+  /* width: 10rem; */
   padding: 0 10px;
   color: #fff;
   cursor: pointer;
@@ -60,4 +60,33 @@ tr:nth-child(even) {
 .nametag {
   padding: 50px 80px;
   text-align: center;
+}
+
+@media all and (max-width: 768px) {
+  body {
+    font-size: 13px;
+  }
+  .wrapper {
+    padding: 0 20px;
+  }
+  .nav {
+    width: 100%;
+    padding: 1rem 0;
+  }
+  .world {
+    width: 100%;
+  }
+  .caption {
+    width: 100%;
+  }
+  .table-data {
+    display: none;
+  }
+
+  .nametag {
+    width: 100%;
+  }
+  .table {
+    width: 80%;
+  }
 }
