@@ -18,11 +18,12 @@ body {
   font-size: 2rem;
   /* width: 10rem; */
   padding: 0 10px;
-  color: #fff;
+  color: #c8d5f0;
   cursor: pointer;
 }
 .world {
   padding: 20px 1rem;
+  color: #e7eefd;
   font-size: 1.8rem;
 }
 .caption {
