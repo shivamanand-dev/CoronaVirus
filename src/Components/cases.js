@@ -1,10 +1,11 @@
 import React from "react";
+import Country from "./country";
 
 class Cases extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cases: null
+      cases: []
     };
   }
   componentDidMount() {
@@ -16,10 +17,27 @@ class Cases extends React.Component {
     return this.state.cases ? (
       <>
         <section className="wrapper">
-          <div>
-            <h1>Country</h1>
-          </div>
-          {console.log(this.state.cases.china)}
+          {console.log(this.state.cases)}
+
+          <table class="table is-bordered">
+            <thead>
+              <tr className="table-data">
+                <th>Country</th>
+                <th>Total Case</th>
+                <th>TodayCase</th>
+                <th>Total Deaths</th>
+                <th>TodayDeaths</th>
+                <th>Recovered</th>
+                <th>Active</th>
+                <th>Critical</th>
+                <th>CasePerOneMillion</th>
+                <th>DeathPerOneMillion</th>
+              </tr>
+            </thead>
+            {this.state.cases.map(country => (
+              <Country info={country} />
+            ))}
+          </table>
         </section>
       </>
     ) : (

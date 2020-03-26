@@ -9,6 +9,9 @@ function App() {
       <Header />
       <World />
       <Cases />
+      <div>
+        <h4 className="nametag">Made by Shivam Anand</h4>
+      </div>
     </>
   );
 }

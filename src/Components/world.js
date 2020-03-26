@@ -23,21 +23,17 @@ class World extends React.Component {
             <span className="covid">COVID-19</span> patient around the globe
           </h2>
           {console.log(this.state.worldReport)}
-          <div className="table">
-            <ul>
-              <li>
-                <h4>
-                  <span className="title">Total Cases: </span>
-                  {this.state.worldReport.cases}
-                </h4>
-              </li>
-              <li>
-                <h4>Total Deaths: {this.state.worldReport.deaths}</h4>
-              </li>
-              <li>
-                <h4>Total Recovered: {this.state.worldReport.recovered}</h4>
-              </li>
-            </ul>
+          <div className="table grid-col-2">
+            <div className="title">
+              <h4>Total cases:</h4>
+              <h4>Total Deaths:</h4>
+              <h4>Total Recovered:</h4>
+            </div>
+            <div className="numbers">
+              <h4>{this.state.worldReport.cases}</h4>
+              <h4>{this.state.worldReport.deaths}</h4>
+              <h4>{this.state.worldReport.recovered}</h4>
+            </div>
           </div>
         </section>
       </>
