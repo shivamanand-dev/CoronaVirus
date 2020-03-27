@@ -1,9 +1,11 @@
 import React from "react";
 
+const deaths = [];
+
 const Country = ({ info }) => {
+  deaths.push(info.deaths);
   return (
     <>
-      {console.log(info)}
       <tbody>
         <tr>
           <th>{info.country}</th>
