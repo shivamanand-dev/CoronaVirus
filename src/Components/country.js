@@ -1,9 +1,6 @@
 import React from "react";
 
-const deaths = [];
-
 const Country = ({ info }) => {
-  deaths.push(info.deaths);
   return (
     <>
       <tbody>
