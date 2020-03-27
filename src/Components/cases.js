@@ -1,11 +1,15 @@
 import React from "react";
 import Country from "./country";
+import { Count, Graph } from "./graph";
+// import Count from "./count";
 
 class Cases extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cases: []
+      cases: [],
+      deaths: [],
+      country: []
     };
   }
   componentDidMount() {
@@ -13,11 +17,20 @@ class Cases extends React.Component {
       .then(res => res.json())
       .then(res => this.setState({ cases: res }));
   }
+
   render() {
     return this.state.cases ? (
       <>
         <section className="wrapper">
           {console.log(this.state.cases)}
+          {console.log("death", this.state.deaths)}
+          <div>
+            {this.state.cases.map(country => (
+              <Count info={country} />
+              //   <Graph info={country} />
+            ))}
+            <Graph />
+          </div>
 
           <table class="wrapper vitamins">
             <thead>
