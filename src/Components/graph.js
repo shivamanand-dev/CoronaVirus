@@ -5,14 +5,14 @@ const data = {
   labels: [],
   datasets: [
     {
-      label: "Death Per Country",
+      label: "10 Countries with most cases",
       fill: false,
       lineTension: 0.1,
       backgroundColor: "rgba(75,192,192,0.4)",
-      borderColor: "rgb(192, 75, 75)",
+      borderColor: "#7e2424b2",
       borderCapStyle: "butt",
       borderDash: [],
-      borderDashOffset: 0.0,
+      borderDashOffset: 0.9,
       borderJoinStyle: "miter",
       pointBorderColor: "rgba(75,192,192,1)",
       pointBackgroundColor: "#fff",
@@ -29,17 +29,23 @@ const data = {
 };
 
 export const Count = ({ info }) => {
-  if (data.labels.length > 10) {
+  if (data.datasets[0].data.length <= 10) {
     data.labels.push(info.country);
     data.datasets[0].data.push(info.cases);
   }
-  return <>{console.log("from graph")}</>;
+
+  return <>{console.log("from graph", data.datasets[0].backgroundColor)}</>;
 };
 
 export const Graph = () => {
   return (
     <div>
-      <Line data={data} />
+      <Line
+        data={data}
+        width={50}
+        height={300}
+        options={{ maintainAspectRatio: false }}
+      />
     </div>
   );
 };

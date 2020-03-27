@@ -87,7 +87,7 @@ table.vitamins thead {
 }
 
 table.vitamins thead th {
-  color: #fff;
+  color: rgb(255, 255, 255);
   padding: 10px;
   letter-spacing: 1px;
   vertical-align: bottom;
@@ -126,7 +126,7 @@ table.vitamins tbody tr:nth-child(even) {
 }
 
 table.vitamins tbody tr:hover {
-  color: #000;
+  color: #000000;
   background: rgba(255, 255, 255, 0.7);
   font-weight: 900;
 }
