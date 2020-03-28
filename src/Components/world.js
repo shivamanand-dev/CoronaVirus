@@ -1,27 +1,21 @@
 import React from "react";
-import { Doughnut } from "react-chartjs-2";
+import Mortality from "./mortality";
+import Recovered from "./recovery";
 
-const mortalityData = {
-  labels: ["Death", "Recovered"],
-  datasets: [
-    {
-      data: [300, 100],
-      backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
-      hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"]
-    }
-  ]
-};
+let active = 0;
+let deaths = 0;
+let recovered = 0;
 
-const RecoveryData = {
-  labels: ["Death", "Recovered+Active"],
-  datasets: [
-    {
-      data: [300, 50],
-      backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
-      hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"]
-    }
-  ]
-};
+// const RecoveryData = {
+//   labels: ["Death", "Recovered+Active"],
+//   datasets: [
+//     {
+//       data: [4, 5],
+//       backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"]
+//       //   hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"]
+//     }
+//   ]
+// };
 
 class World extends React.Component {
   constructor(props) {
@@ -36,6 +30,7 @@ class World extends React.Component {
       .then(res => res.json())
       .then(res => this.setState({ worldReport: res }));
   }
+
   render() {
     return (
       <>
@@ -62,20 +57,12 @@ class World extends React.Component {
                 </div>
               </div>
               <div className="mortalityDoughnut">
-                <Doughnut
-                  data={mortalityData}
-                  width={50}
-                  height={200}
-                  options={{ maintainAspectRatio: false }}
-                />
+                <Mortality cases={this.state.worldReport} />
+                <blockquote className="blockqoute">Death Rate</blockquote>
               </div>
               <div className="recoveryDoughnut">
-                <Doughnut
-                  data={RecoveryData}
-                  width={50}
-                  height={200}
-                  options={{ maintainAspectRatio: false }}
-                />
+                <Recovered cases={this.state.worldReport} />
+                <blockquote className="blockqoute">Recovery Rate</blockquote>
               </div>
             </div>
           </div>
