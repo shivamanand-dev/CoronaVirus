@@ -7,9 +7,24 @@ class Cases extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cases: []
+      cases: [],
+      searchedCountry: []
     };
+    this.searchCountryName = React.createRef(null);
   }
+  handleSearch = () => {
+    var temp = this.state.cases.filter(country =>
+      country.country
+        .toLowerCase()
+        .includes(this.searchCountryName.current.value.toLowerCase())
+    );
+    this.setState({ searchedCountry: temp });
+    console.log(temp, "temp");
+  };
+  handleSearchBox = () => {
+    this.searchCountryName.current.value = null;
+    this.setState({ searchedCountry: null });
+  };
   componentDidMount() {
     fetch("https://corona.lmao.ninja/countries")
       .then(res => res.json())
@@ -19,14 +34,44 @@ class Cases extends React.Component {
   render() {
     return this.state.cases ? (
       <>
+        {console.log(this.state.searchedCountry)}
         <section className="wrapper">
           {console.log(this.state.cases)}
-          <div>
+          <div className="graph">
             {this.state.cases.map(country => (
               <Count info={country} />
               //   <Graph info={country} />
             ))}
             <Graph />
+          </div>
+
+          {/* search */}
+
+          <div class="field has-addons">
+            <div class="control">
+              <input
+                class="input"
+                ref={this.searchCountryName}
+                type="text"
+                placeholder="Find a country"
+              />
+            </div>
+            <div class="control">
+              <button>
+                <a class="button is-info" onClick={this.handleSearch}>
+                  Search
+                </a>
+              </button>
+            </div>
+            {this.state.searchedCountry ? (
+              <div class="control margin-left">
+                <a class="button is-info" onClick={this.handleSearchBox}>
+                  Show All
+                </a>
+              </div>
+            ) : (
+              ""
+            )}
           </div>
 
           <table class="wrapper vitamins">
@@ -42,9 +87,11 @@ class Cases extends React.Component {
                 <th>Critical</th>
               </tr>
             </thead>
-            {this.state.cases.map(country => (
-              <Country info={country} />
-            ))}
+            {this.state.searchedCountry
+              ? this.state.searchedCountry.map(country => (
+                  <Country info={country} />
+                ))
+              : this.state.cases.map(country => <Country info={country} />)}
           </table>
         </section>
       </>

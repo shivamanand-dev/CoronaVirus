@@ -2,21 +2,6 @@ import React from "react";
 import Mortality from "./mortality";
 import Recovered from "./recovery";
 
-let active = 0;
-let deaths = 0;
-let recovered = 0;
-
-// const RecoveryData = {
-//   labels: ["Death", "Recovered+Active"],
-//   datasets: [
-//     {
-//       data: [4, 5],
-//       backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"]
-//       //   hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"]
-//     }
-//   ]
-// };
-
 class World extends React.Component {
   constructor(props) {
     super(props);
