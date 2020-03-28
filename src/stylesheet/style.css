@@ -106,6 +106,9 @@ body {
 .green {
   color: green;
 }
+.graph {
+  padding-bottom: 3rem;
+}
 
 /* Table */
 
