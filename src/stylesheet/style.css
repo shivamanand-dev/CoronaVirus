@@ -27,7 +27,7 @@ body {
 
 /* World */
 .world {
-  height: 91.2vh;
+  height: 100vh;
   background: linear-gradient(
     to top,
     rgba(53, 0, 0, 0.2) 0%,
