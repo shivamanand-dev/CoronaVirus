@@ -50,6 +50,7 @@ body {
 .grid-col-3 {
   display: grid;
   text-align: center;
+  padding-top: 5%;
   grid-template-columns: repeat(3, 1fr);
 }
 .world-text {
@@ -74,11 +75,17 @@ body {
   padding: 10px;
   font-size: 1.2rem;
 }
+.mortalityDoughnut {
+  padding: 4rem 1rem 0 2rem;
+}
+.recoveryDoughnut {
+  padding: 4rem 1rem 0 2rem;
+}
 .covid {
   font-weight: bold;
 }
 .table {
-  padding: 1rem 0 5rem 0;
+  padding: 3rem 0 5rem 0;
 }
 .grid-col-2 {
   display: grid;
@@ -206,7 +213,7 @@ table.vitamins tfoot td {
     font-size: 13px;
   }
   .world {
-    height: 100vh;
+    clip-path: none;
   }
   .wrapper {
     padding: 0 20px;
@@ -221,6 +228,9 @@ table.vitamins tfoot td {
   }
   .caption {
     width: 100%;
+  }
+  .grid-col-3 {
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .nametag {
