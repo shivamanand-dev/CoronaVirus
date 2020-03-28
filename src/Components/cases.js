@@ -7,9 +7,7 @@ class Cases extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cases: [],
-      deaths: [],
-      country: []
+      cases: []
     };
   }
   componentDidMount() {
@@ -23,7 +21,6 @@ class Cases extends React.Component {
       <>
         <section className="wrapper">
           {console.log(this.state.cases)}
-          {console.log("death", this.state.deaths)}
           <div>
             {this.state.cases.map(country => (
               <Count info={country} />
