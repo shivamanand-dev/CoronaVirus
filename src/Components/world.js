@@ -1,4 +1,27 @@
 import React from "react";
+import { Doughnut } from "react-chartjs-2";
+
+const mortalityData = {
+  labels: ["Death", "Recovered"],
+  datasets: [
+    {
+      data: [300, 100],
+      backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+      hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"]
+    }
+  ]
+};
+
+const RecoveryData = {
+  labels: ["Death", "Recovered+Active"],
+  datasets: [
+    {
+      data: [300, 50],
+      backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+      hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"]
+    }
+  ]
+};
 
 class World extends React.Component {
   constructor(props) {
@@ -38,8 +61,22 @@ class World extends React.Component {
                   <h4>{this.state.worldReport.recovered}</h4>
                 </div>
               </div>
-              <div></div>
-              <div></div>
+              <div className="mortalityDoughnut">
+                <Doughnut
+                  data={mortalityData}
+                  width={50}
+                  height={200}
+                  options={{ maintainAspectRatio: false }}
+                />
+              </div>
+              <div className="recoveryDoughnut">
+                <Doughnut
+                  data={RecoveryData}
+                  width={50}
+                  height={200}
+                  options={{ maintainAspectRatio: false }}
+                />
+              </div>
             </div>
           </div>
         </section>
