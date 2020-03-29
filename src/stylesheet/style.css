@@ -137,7 +137,7 @@ body {
 
 table.vitamins {
   /* display: none; */
-  height: 500px;
+  /* height: 500px; */
   text-align: center;
   width: 80%;
   padding-top: 20px;
@@ -167,12 +167,12 @@ table.vitamins thead th {
 }
 
 table.vitamins thead th:nth-child(1) {
-  width: 20%;
+  /* width: 20%; */
   text-align: center;
   padding-left: 20px;
 }
 
-table.vitamins thead th:nth-child(2) {
+/* table.vitamins thead th:nth-child(2) {
   width: 30%;
 }
 
@@ -182,7 +182,7 @@ table.vitamins thead th:nth-child(3) {
 
 table.vitamins thead th:nth-child(4) {
   width: 15%;
-}
+} */
 
 table.vitamins tbody {
   height: 500px;
@@ -248,9 +248,11 @@ table.vitamins tfoot td {
     font-size: 13px;
   }
   .world {
-    height: 40vh;
+    height: 60vh;
     background: rgb(36, 30, 30);
+    /* padding: 10px; */
     clip-path: none;
+    margin-bottom: 60px;
     background-color: rgb(36, 30, 30);
   }
   .wrapper {
@@ -289,5 +291,8 @@ table.vitamins tfoot td {
   }
   table.vitamins {
     font-size: 0.8em;
+    margin-top: 5rem;
+    overflow-x: scroll;
+    overflow-y: scroll;
   }
 }
