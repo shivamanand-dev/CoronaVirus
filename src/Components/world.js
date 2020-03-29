@@ -25,7 +25,7 @@ class World extends React.Component {
 
             <h2 className="caption">
               A Real time report of all the{" "}
-              <span className="covid">COVID-19</span> patient around the globe
+              <span className="covid">COVID-19</span> patient around the Globe.
             </h2>
             {console.log(this.state.worldReport)}
             <div className="grid-col-3">
