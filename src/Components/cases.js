@@ -86,13 +86,18 @@ class Cases extends React.Component {
                 <th>Today Deaths</th>
                 <th>Recovered</th>
                 <th>Active</th>
-                <th>Critical</th>
               </tr>
             </thead>
             {this.state.cases.map(country => (
               <Country info={country} />
               //   <Graph info={country} />
             ))}
+
+            {/* {this.state.searchedCountry
+              ? this.state.searchedCountry.map(country => (
+                  <Country info={country} />
+                ))
+              : this.state.cases.map(country => <Country info={country} />)} */}
           </table>
         </section>
       </>

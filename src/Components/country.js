@@ -12,7 +12,6 @@ const Country = ({ info }) => {
           <td className="red_200">{info.todayDeaths}</td>
           <td className="green">{info.recovered}</td>
           <td>{info.active}</td>
-          <td>{info.critical}</td>
         </tr>
       </tbody>
     </>
