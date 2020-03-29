@@ -47,7 +47,7 @@ class Cases extends React.Component {
 
           {/* search */}
 
-          <div class="field has-addons">
+          {/* <div class="field has-addons">
             <div class="control">
               <input
                 class="input"
@@ -56,23 +56,25 @@ class Cases extends React.Component {
                 placeholder="Find a country"
               />
             </div>
-            <div class="control">
+            <div className="open">
               <button>
-                <a class="button is-info" onClick={this.handleSearch}>
+                <a class="button" onClick={this.handleSearch}>
                   Search
                 </a>
               </button>
             </div>
             {this.state.searchedCountry ? (
-              <div class="control margin-left">
-                <a class="button is-info" onClick={this.handleSearchBox}>
-                  Show All
-                </a>
+              <div class="close">
+                <button>
+                  <a class="button" onClick={this.handleSearchBox}>
+                    Show All
+                  </a>
+                </button>
               </div>
             ) : (
               ""
             )}
-          </div>
+          </div> */}
 
           <table class="wrapper vitamins">
             <thead>
@@ -87,11 +89,10 @@ class Cases extends React.Component {
                 <th>Critical</th>
               </tr>
             </thead>
-            {this.state.searchedCountry
-              ? this.state.searchedCountry.map(country => (
-                  <Country info={country} />
-                ))
-              : this.state.cases.map(country => <Country info={country} />)}
+            {this.state.cases.map(country => (
+              <Country info={country} />
+              //   <Graph info={country} />
+            ))}
           </table>
         </section>
       </>
