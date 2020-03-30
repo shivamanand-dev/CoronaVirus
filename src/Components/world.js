@@ -43,11 +43,24 @@ class World extends React.Component {
               </div>
               <div className="mortalityDoughnut">
                 <Mortality cases={this.state.worldReport} />
-                <blockquote className="blockqoute">Death Rate</blockquote>
+                <blockquote className="blockqoute">
+                  Death Rate:{" "}
+                  {(
+                    (this.state.worldReport.deaths * 100) /
+                    this.state.worldReport.cases
+                  ).toFixed(2)}
+                  %
+                </blockquote>
               </div>
               <div className="recoveryDoughnut">
                 <Recovered cases={this.state.worldReport} />
-                <blockquote className="blockqoute">Recovery Rate</blockquote>
+                <blockquote className="blockqoute">
+                  Recovery Rate:{" "}
+                  {(
+                    (this.state.worldReport.recovered * 100) /
+                    this.state.worldReport.cases
+                  ).toFixed(2)}
+                </blockquote>
               </div>
             </div>
           </div>

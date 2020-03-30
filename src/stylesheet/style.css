@@ -43,8 +43,6 @@ body {
     rgba(53, 0, 0, 1) 100%
   );
   clip-path: polygon(0% 0, 100% 0, 100% 80%, 0% 100%);
-
-  margin-bottom: 5rem;
 }
 
 .grid-col-3 {
@@ -282,7 +280,6 @@ table.vitamins tfoot td {
   .recoveryDoughnut {
     display: none;
   }
-
   .nametag {
     width: 100%;
   }
