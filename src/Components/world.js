@@ -60,6 +60,7 @@ class World extends React.Component {
                     (this.state.worldReport.recovered * 100) /
                     this.state.worldReport.cases
                   ).toFixed(2)}
+                  %
                 </blockquote>
               </div>
             </div>
