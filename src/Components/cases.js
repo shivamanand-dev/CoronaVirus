@@ -8,23 +8,21 @@ class Cases extends React.Component {
     super(props);
     this.state = {
       cases: [],
-      searchedCountry: []
+      searchedCountry: ""
     };
-    this.searchCountryName = React.createRef(null);
+    // this.searchCountryName = React.createRef(null);
   }
-  handleSearch = () => {
+
+  // Search
+
+  onChange = e => {
     var temp = this.state.cases.filter(country =>
-      country.country
-        .toLowerCase()
-        .includes(this.searchCountryName.current.value.toLowerCase())
+      country.country.toLowerCase().includes(e.target.value.toLowerCase())
     );
     this.setState({ searchedCountry: temp });
     console.log(temp, "temp");
   };
-  handleSearchBox = () => {
-    this.searchCountryName.current.value = null;
-    this.setState({ searchedCountry: null });
-  };
+
   componentDidMount() {
     fetch("https://corona.lmao.ninja/countries")
       .then(res => res.json())
@@ -47,34 +45,13 @@ class Cases extends React.Component {
 
           {/* search */}
 
-          {/* <div class="field has-addons">
-            <div class="control">
-              <input
-                class="input"
-                ref={this.searchCountryName}
-                type="text"
-                placeholder="Find a country"
-              />
-            </div>
-            <div className="open">
-              <button>
-                <a class="button" onClick={this.handleSearch}>
-                  Search
-                </a>
-              </button>
-            </div>
-            {this.state.searchedCountry ? (
-              <div class="close">
-                <button>
-                  <a class="button" onClick={this.handleSearchBox}>
-                    Show All
-                  </a>
-                </button>
-              </div>
-            ) : (
-              ""
-            )}
-          </div> */}
+          <div className="search">
+            <input
+              label="searchCountry"
+              placeholder="Search Country"
+              onChange={this.onChange}
+            />
+          </div>
 
           <table class="wrapper vitamins">
             <thead>
@@ -88,16 +65,16 @@ class Cases extends React.Component {
                 <th>Active</th>
               </tr>
             </thead>
-            {this.state.cases.map(country => (
+            {/* {this.state.cases.map(country => (
               <Country info={country} />
               //   <Graph info={country} />
-            ))}
+            ))} */}
 
-            {/* {this.state.searchedCountry
+            {this.state.searchedCountry
               ? this.state.searchedCountry.map(country => (
                   <Country info={country} />
                 ))
-              : this.state.cases.map(country => <Country info={country} />)} */}
+              : this.state.cases.map(country => <Country info={country} />)}
           </table>
         </section>
       </>
