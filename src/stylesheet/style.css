@@ -2,6 +2,7 @@
 body {
   background-color: rgb(36, 30, 30);
   color: rgb(184, 184, 184);
+  font-family: "Baloo Da 2", cursive;
 }
 .wrapper {
   max-width: 1100px;
@@ -28,7 +29,7 @@ body {
 /* World */
 .world {
   height: 100vh;
-  background: linear-gradient(
+  /* background: linear-gradient(
     to top,
     rgba(53, 0, 0, 0.2) 0%,
     rgba(53, 0, 0, 0.2) 10%,
@@ -41,8 +42,8 @@ body {
     rgba(53, 0, 0, 0.8) 80%,
     rgba(53, 0, 0, 0.9) 90%,
     rgba(53, 0, 0, 1) 100%
-  );
-  clip-path: polygon(0% 0, 100% 0, 100% 80%, 0% 100%);
+  ); */
+  /* clip-path: polygon(0% 0, 100% 0, 100% 80%, 0% 100%); */
 }
 
 .grid-col-3 {
@@ -51,6 +52,7 @@ body {
   padding-top: 5%;
   grid-template-columns: repeat(3, 1fr);
 }
+
 .world-text {
   width: 90%;
   font-family: "Sen", sans-serif;
@@ -64,16 +66,45 @@ body {
   font-size: 1.8rem;
   padding: 1% 1rem 1rem 1rem;
 }
+.grid-col-2 {
+  display: grid;
+  text-align: center;
+  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr);
+}
 .title {
-  color: rgb(184, 184, 184);
+  color: rgb(224, 224, 224);
 }
-.title h4 {
-  padding: 10px;
-  font-size: 1.2rem;
+.value {
+  color: #fff;
+  font-size: 2rem;
 }
-.numbers h4 {
+.cases {
   padding: 10px;
-  font-size: 1.2rem;
+  /* width: 90%; */
+  border-radius: 5px;
+  /* margin: 0 auto; */
+  background-color: rgb(162, 165, 11);
+}
+.deaths {
+  padding: 10px;
+  margin-top: 5px;
+  /* width: 90%; */
+  border-radius: 5px;
+  /* margin: 0 auto; */
+  background-color: rgb(165, 11, 11);
+}
+.recovered {
+  padding: 10px;
+  margin-top: 5px;
+  /* width: 90%; */
+  border-radius: 5px;
+  /* margin: 0 auto; */
+  background-color: rgb(37, 165, 11);
+}
+.title {
+  padding: 10px;
+  font-size: 1.4rem;
 }
 .mortalityDoughnut {
   padding: 4rem 1rem 0 2rem;
@@ -89,11 +120,9 @@ body {
 }
 .table {
   padding: 3rem 0 5rem 0;
-}
-.grid-col-2 {
-  display: grid;
+  width: 100%;
+  margin: 0 auto;
   text-align: center;
-  grid-template-columns: repeat(2, 1fr);
 }
 
 .red {
@@ -124,11 +153,22 @@ body {
 .close {
   width: 10%;
 }
-.input {
-  width: 100%;
-  /* padding: 0.5rem; */
-  border: none;
+.search {
+  padding-top: 1rem;
+  text-align: center;
+}
+.search input {
+  width: 20rem;
+  padding: 0.8rem;
+  /* margin: 0 auto; */
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
   border-radius: 5px;
+}
+.search input::placeholder {
+  text-align: center;
+  color: #999898;
 }
 
 /* Table */
@@ -246,7 +286,7 @@ table.vitamins tfoot td {
     font-size: 13px;
   }
   .world {
-    height: 60vh;
+    height: 570px;
     background: rgb(36, 30, 30);
     /* padding: 10px; */
     clip-path: none;
