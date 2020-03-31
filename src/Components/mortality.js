@@ -2,7 +2,7 @@ import React from "react";
 import { Doughnut } from "react-chartjs-2";
 
 const data = {
-  labels: ["Active Cases", "Death"],
+  labels: ["Active+Recovered", "Death"],
   datasets: [
     {
       data: [],
