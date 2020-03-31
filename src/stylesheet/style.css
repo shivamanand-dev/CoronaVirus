@@ -76,7 +76,7 @@ body {
   color: rgb(224, 224, 224);
 }
 .value {
-  color: #fff;
+  color: rgb(240, 233, 233);
   font-size: 2rem;
 }
 .cases {
@@ -84,7 +84,10 @@ body {
   /* width: 90%; */
   border-radius: 5px;
   /* margin: 0 auto; */
-  background-color: rgb(162, 165, 11);
+  background-color: rgb(218, 196, 0);
+}
+.cases:hover {
+  background-color: rgba(218, 196, 0, 0.808);
 }
 .deaths {
   padding: 10px;
@@ -94,6 +97,9 @@ body {
   /* margin: 0 auto; */
   background-color: rgb(165, 11, 11);
 }
+.deaths:hover {
+  background-color: salmon;
+}
 .recovered {
   padding: 10px;
   margin-top: 5px;
@@ -101,6 +107,9 @@ body {
   border-radius: 5px;
   /* margin: 0 auto; */
   background-color: rgb(37, 165, 11);
+}
+.recovered:hover {
+  background-color: rgba(37, 165, 11, 0.781);
 }
 .title {
   padding: 10px;
@@ -165,6 +174,9 @@ body {
   border: 2px solid #fff;
   color: #fff;
   border-radius: 5px;
+}
+.search input:hover {
+  background-color: rgba(109, 176, 231, 0.151);
 }
 .search input::placeholder {
   text-align: center;
