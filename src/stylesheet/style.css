@@ -98,7 +98,7 @@ body {
   background-color: rgb(165, 11, 11);
 }
 .deaths:hover {
-  background-color: salmon;
+  background-color: rgba(165, 11, 11, 0.753);
 }
 .recovered {
   padding: 10px;
