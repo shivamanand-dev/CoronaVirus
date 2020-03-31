@@ -171,12 +171,15 @@ body {
   padding: 0.8rem;
   /* margin: 0 auto; */
   background-color: transparent;
-  border: 2px solid #fff;
+  border: 2px solid rgba(109, 176, 231, 0.35);
   color: #fff;
   border-radius: 5px;
 }
 .search input:hover {
   background-color: rgba(109, 176, 231, 0.151);
+}
+.search input:focus {
+  border: 2px solid #fff;
 }
 .search input::placeholder {
   text-align: center;
