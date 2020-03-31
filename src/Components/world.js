@@ -29,16 +29,23 @@ class World extends React.Component {
             </h2>
             {console.log(this.state.worldReport)}
             <div className="grid-col-3">
-              <div className="table grid-col-2">
-                <div className="title">
-                  <h4>Total cases:</h4>
-                  <h4>Total Deaths:</h4>
-                  <h4>Total Recovered:</h4>
+              <div className="table">
+                <div className="cases">
+                  <h4 className="title">Total cases:</h4>
+                  <h4 className="value">{this.state.worldReport.cases}</h4>
+                </div>
+                <div className="deaths">
+                  <h4 className="title">Total Deaths:</h4>
+                  <h4 className="value"> {this.state.worldReport.deaths}</h4>
+                </div>
+                <div className="recovered">
+                  <h4 className="title">Total Recovered:</h4>
+                  <h4 className="value"> {this.state.worldReport.recovered}</h4>
                 </div>
                 <div className="numbers">
-                  <h4>{this.state.worldReport.cases}</h4>
-                  <h4>{this.state.worldReport.deaths}</h4>
-                  <h4>{this.state.worldReport.recovered}</h4>
+                  <h4></h4>
+                  <h4></h4>
+                  <h4></h4>
                 </div>
               </div>
               <div className="mortalityDoughnut">
