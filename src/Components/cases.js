@@ -1,7 +1,6 @@
 import React from "react";
 import Country from "./country";
 import { Count, Graph } from "./graph";
-// import Count from "./count";
 
 class Cases extends React.Component {
   constructor(props) {
