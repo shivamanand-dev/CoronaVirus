@@ -31,7 +31,7 @@ class Cases extends React.Component {
   render() {
     return this.state.cases ? (
       <>
-        {console.log(this.state.searchedCountry)}
+        {/* {console.log(this.state.searchedCountry)} */}
         <section className="wrapper">
           {console.log(this.state.cases)}
           <div className="graph">
