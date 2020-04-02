@@ -34,7 +34,7 @@ export const Count = ({ info }) => {
     data.datasets[0].data.push(info.cases);
   }
 
-  return <>{console.log("from graph", data.datasets[0].backgroundColor)}</>;
+  return <>{console.log("from graph")}</>;
 };
 
 export const Graph = () => {
